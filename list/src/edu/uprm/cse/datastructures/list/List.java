@@ -1,6 +1,6 @@
 package edu.uprm.cse.datastructures.list;
 
-public interface List<E> {
+public interface List<E> extends Iterable<E> {
 	
 	public int size();
 	
@@ -8,8 +8,10 @@ public interface List<E> {
 	
 	public boolean isMember(E e);
 	
-	public int indexOf(E e);
+	public int firstIndexOf(E e);
 	
+	public int lastIndexOf(E e);
+
 	public void add(E e);
 	
 	public void add(E e, int position);
@@ -22,6 +24,6 @@ public interface List<E> {
 	
 	public void clear();
 	
-	public E[] toArray();	
+	public Object[] toArray();	
 
 }
